@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Barber Booking</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<div id="loading" class="loading">
+  <i class="fa-brands fa-whatsapp"></i>
+  <p>Redirecting to WhatsApp…</p>
+</div>
+
+<body>
+
+  <!-- Background -->
+  <div id="bg"></div>
+
+  <div class="container">
+<!--Adding logo-->
+<a href="https://www.instagram.com/jabarigotvibes" 
+   target="_blank" 
+   class="logo-link">
+
+  <div class="logo-wrapper">
+    <div class="logo-flip">
+      <div class="logo-face logo-front">
+        <img src="images/logo.JPG" alt="Barber Logo">
+      </div>
+
+      <div class="logo-face logo-back">
+        <img src="images/IMG_2495.JPG" alt="Barber Photo">
+      </div>
+    </div>
+  </div>
+
+</a>
+
+
+
+
+  <h1 class="barber-name"> Philothe_barber KE</h1>
+<p class="barber-location">Miritini, Mombasa</p>
+
+
+    <h1>Fresh cuts. Clean fades.</h1>
+    <p class="subtitle">Book your slot in seconds</p>
+
+    <form id="bookingForm">
+
+      <div class="services">
+        <div class="service-card active" data-bg="haircut">
+          <h3>Haircut</h3>
+          <span>KES 250</span>
+        </div>
+
+        <div class="service-card" data-bg="beard">
+          <h3>Taper cut</h3>
+          <span>KES 350</span>
+        </div>
+
+        <div class="service-card" data-bg="combo">
+          <h3>Haircut + Beard</h3>
+          <span>KES 400</span>
+        </div>
+
+        <div class="service-card" data-bg="home">
+          <h3>kids cut</h3>
+          <span>KES 150</span>
+        </div>
+      </div>
+
+      <input type="hidden" id="service" value="Haircut">
+
+      <div class="grid">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="tel" id="phone" placeholder="Phone Number" required>
+        <input type="date" id="day" placeholder="Booking day" required>
+        <input type="time" id="time" required>
+      </div>
+
+      <small id="busyWarning" class="busy-warning"></small>
+
+
+      <textarea id="notes" placeholder="Any special requests?"></textarea>
+
+      <button type="submit" class="btn">
+        <i class="fa-brands fa-whatsapp" style="margin-top: 5px; "  ></i>
+        <span>Book via WhatsApp</span>
+      </button>
+
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+<footer class="site-footer">
+  <p>
+    © 2026 Barber Booking.  
+    Built by <span class="creator">Jabari</span>
+  </p>
+</footer>
+
+</html>

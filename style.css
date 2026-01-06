@@ -1,0 +1,241 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.loading {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  z-index: 999;
+}
+
+.loading i {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+
+body {
+  margin: 0;
+  color: white;
+}
+
+#bg {
+  position: fixed;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.4);
+  z-index: -1;
+  transition: background-image 0.4s ease;
+}
+
+.container {
+  max-width: 420px;
+  margin: 40px auto;
+  padding: 20px;
+  background: rgba(0,0,0,0.6);
+  border-radius: 16px;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.logo img {
+  max-width: 100px;
+  height: auto;
+  border-radius: 70%;
+  background: white;
+  padding: 4px;
+}
+.logo-wrapper {
+  display: flex;
+  justify-content: center;
+  perspective: 1000px;
+  margin-bottom: 20px;
+}
+
+.logo-flip {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease;
+  cursor: pointer;
+}
+
+.logo-wrapper:hover .logo-flip {
+  transform: rotateY(180deg);
+}
+
+/* Both faces */
+.logo-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Front (logo) */
+.logo-front {
+  background: #000;
+}
+
+/* Back (your photo) */
+.logo-back {
+  transform: rotateY(180deg);
+  background: #111;
+}
+
+/* Images */
+.logo-face img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.barber-name {
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.barber-location {
+  text-align: center;
+  font-size: 0.9rem;
+  opacity: 0.85;
+  margin-bottom: 15px;
+}
+
+
+
+h1 {
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+
+.services {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.service-card {
+  padding: 15px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.08);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.service-card.active,
+.service-card:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+.service-card h3 {
+  margin: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+}
+.busy-warning {
+  display: block;
+  margin-top: 8px;
+  color: #ff9800;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+
+textarea {
+  margin-top: 10px;
+}
+
+.btn {
+  margin-top: 15px;
+  width: 100%;
+  padding: 12px;
+  background: #25d366;
+  color: black;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+}
+.btn:hover {
+  background: #cecece;
+}
+.service-card {
+  transition: transform 0.3s ease, background 0.3s ease;
+  cursor: pointer;
+}
+
+.service-card.active {
+  background: rgba(255,255,255,0.15);
+  transform: scale(1.05);
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+.busy-warning {
+  display: block;
+  margin: 10px 0;
+  color: #ffcc00;
+  font-size: 0.9rem;
+}
+
+.btn {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+.site-footer {
+  text-align: center;
+  padding: 15px;
+  font-size: 13px;
+  color: rgba(255,255,255,0.6);
+}
+
+.site-footer .creator {
+  font-weight: 600;
+  color: #19bd42; /* WhatsApp green */
+}
+
+
