@@ -19,12 +19,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("bookingForm");
 
   // IMAGES (make sure paths & names are correct)
-  const images = {
-    haircut: "images/haircutt.jpg",
-    beard: "images/SJMG8120.jpg",
-    combo: "images/haircutt-beard.jpg",
-    home: "images/kids.jpg"
-  };
+const images = {
+  haircut: "images/haircut.avif",
+  beard: "images/beard.avif",
+  combo: "images/combo.avif",
+  home: "images/home.avif",
+};
+
 
   // DEFAULT BACKGROUND
   bg.style.backgroundImage = `url('${images.haircut}')`;
@@ -126,5 +127,6 @@ setTimeout(() => {
   });
 
 });
+
 
 
