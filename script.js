@@ -1,3 +1,6 @@
+console.log("Script loaded");
+console.log(images);
+
 document.addEventListener("DOMContentLoaded", () => {
   console.log("JS LOADED");
 
@@ -123,4 +126,5 @@ setTimeout(() => {
   });
 
 });
+
 
