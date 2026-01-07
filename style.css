@@ -27,7 +27,7 @@ body {
 }
 
 #bg {
-  background: red;
+
   position: fixed;
   inset: 0;
   background-size: cover;
@@ -238,6 +238,7 @@ textarea {
   font-weight: 600;
   color: #19bd42; /* WhatsApp green */
 }
+
 
 
 
